@@ -1,0 +1,82 @@
+CRITICAL - 2025-10-19 14:57:35 --> ErrorException: Undefined variable $vbaseurl
+[Method: GET, Route: usuario/login]
+in APPPATH\Views\admin\vw_login.php on line 47.
+ 1 APPPATH\Views\admin\vw_login.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vbaseurl', 'C:\\xampp\\htdocs\\proyecto\\app\\Views\\admin\\vw_login.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyecto\\app\\Views\\admin\\vw_login.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_login', [], true)
+ 5 APPPATH\Controllers\Usuario.php(9): view('admin/vw_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->vw_login()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-19 14:59:41 --> ErrorException: Undefined variable $vcarpeta
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\vw_head.php on line 17.
+ 1 APPPATH\Views\admin\vw_head.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vcarpeta', 'C:\\xampp\\htdocs\\proyecto\\app\\Views\\admin\\vw_head.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyecto\\app\\Views\\admin\\vw_head.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_head', [], true)
+ 5 APPPATH\Controllers\Admin.php(14): view('admin/vw_head', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->vw_index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-19 15:00:46 --> ErrorException: Undefined variable $vcarpeta
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\vw_head.php on line 17.
+ 1 APPPATH\Views\admin\vw_head.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vcarpeta', 'C:\\xampp\\htdocs\\proyecto\\app\\Views\\admin\\vw_head.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyecto\\app\\Views\\admin\\vw_head.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_head', [], true)
+ 5 APPPATH\Controllers\Admin.php(14): view('admin/vw_head', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->vw_index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-19 15:01:10 --> ErrorException: Undefined variable $vcarpeta
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\vw_head.php on line 17.
+ 1 APPPATH\Views\admin\vw_head.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vcarpeta', 'C:\\xampp\\htdocs\\proyecto\\app\\Views\\admin\\vw_head.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyecto\\app\\Views\\admin\\vw_head.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_head', [], true)
+ 5 APPPATH\Controllers\Admin.php(14): view('admin/vw_head', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->vw_index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-19 15:01:38 --> ErrorException: Undefined variable $vcarpeta
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\vw_head.php on line 17.
+ 1 APPPATH\Views\admin\vw_head.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vcarpeta', 'C:\\xampp\\htdocs\\proyecto\\app\\Views\\admin\\vw_head.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\proyecto\\app\\Views\\admin\\vw_head.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_head', [], true)
+ 5 APPPATH\Controllers\Admin.php(14): view('admin/vw_head', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->vw_index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-19 15:02:28 --> ParseError: syntax error, unexpected identifier "stylesheet", expecting "," or ";"
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\vw_head.php on line 19.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_head', [], true)
+ 3 APPPATH\Controllers\Admin.php(14): view('admin/vw_head', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->vw_index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

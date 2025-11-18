@@ -1,0 +1,268 @@
+DEBUG - 2025-11-18 04:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 04:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 04:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 04:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 04:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 04:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 04:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 04:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-18 04:35:59 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ecovision`.`tb_reportes`, CONSTRAINT `tb_reportes_ibfk_1` FOREIGN KEY (`usu_id`) REFERENCES `tb_usuarios` (`usu_id`) ON DELETE CASCADE) in C:\xampp\htdocs\ecovision\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ecovision\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\ecovision\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\ecovision\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\ecovision\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\ecovision\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ecovision\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ecovision\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ecovision\app\Controllers\Reporte.php(57): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ecovision\system\CodeIgniter.php(933): App\Controllers\Reporte->guardar()
+#9 C:\xampp\htdocs\ecovision\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+#10 C:\xampp\htdocs\ecovision\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ecovision\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ecovision\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ecovision\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-11-18 04:35:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ecovision`.`tb_reportes`, CONSTRAINT `tb_reportes_ibfk_1` FOREIGN KEY (`usu_id`) REFERENCES `tb_usuarios` (`usu_id`) ON DELETE CASCADE)
+[Method: POST, Route: reporte/guardar]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_reportes` (`rep_titulo`, `rep_descripcion`, `tip_id`, `niv_id`, `rep_latitud`, `rep_longitud`, `rep_imagen`, `rep_estado`, `rep_fecha`, `usu_id`) VALUES (:rep_titulo:, :rep_descripcion:, :tip_id:, :niv_id:, :rep_latitud:, :rep_longitud:, :rep_imagen:, :rep_estado:, :rep_fecha:, :usu_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Reporte.php(57): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reporte->guardar()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 04:35:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_ecovision`.`tb_reportes`, CONSTRAINT `tb_reportes_ibfk_1` FOREIGN KEY (`usu_id`) REFERENCES `tb_usuarios` (`usu_id`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_reportes` (`rep_titulo`, `rep_descripcion`, `tip_id`, `niv_id`, `rep_latitud`, `rep_longitud`, `rep_imagen`, `rep_estado`, `rep_fecha`, `usu_id`) VALUES (\'Desague atorado\', \'gh\', \'aire\', \'bajo\', \'-5.205166\', \'-80.638607\', \'1763440559_12ccff895a87a96405e7.jpg\', \'pendiente\', \'2025-11-18\', \'-80.638607\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_reportes` (`rep_titulo`, `rep_descripcion`, `tip_id`, `niv_id`, `rep_latitud`, `rep_longitud`, `rep_imagen`, `rep_estado`, `rep_fecha`, `usu_id`) VALUES (\'Desague atorado\', \'gh\', \'aire\', \'bajo\', \'-5.205166\', \'-80.638607\', \'1763440559_12ccff895a87a96405e7.jpg\', \'pendiente\', \'2025-11-18\', \'-80.638607\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_reportes` (`rep_titulo`, `rep_descripcion`, `tip_id`, `niv_id`, `rep_latitud`, `rep_longitud`, `rep_imagen`, `rep_estado`, `rep_fecha`, `usu_id`) VALUES (:rep_titulo:, :rep_descripcion:, :tip_id:, :niv_id:, :rep_latitud:, :rep_longitud:, :rep_imagen:, :rep_estado:, :rep_fecha:, :usu_id:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Reporte.php(57): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reporte->guardar()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-18 04:35:59 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_ecovision`.`tb_reportes`, CONSTRAINT `tb_reportes_ibfk_1` FOREIGN KEY (`usu_id`) REFERENCES `tb_usuarios` (`usu_id`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `tb_reportes` (`rep_titulo`, `rep_descripcion`, `tip_id`, `niv_id`, `rep_latitud`, `rep_longitud`, `rep_imagen`, `rep_estado`, `rep_fecha`, `usu_id`) VALUES (\'Desague atorado\', \'gh\', \'aire\', \'bajo\', \'-5.205166\', \'-80.638607\', \'1763440559_12ccff895a87a96405e7.jpg\', \'pendiente\', \'2025-11-18\', \'-80.638607\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_reportes` (`rep_titulo`, `rep_descripcion`, `tip_id`, `niv_id`, `rep_latitud`, `rep_longitud`, `rep_imagen`, `rep_estado`, `rep_fecha`, `usu_id`) VALUES (\'Desague atorado\', \'gh\', \'aire\', \'bajo\', \'-5.205166\', \'-80.638607\', \'1763440559_12ccff895a87a96405e7.jpg\', \'pendiente\', \'2025-11-18\', \'-80.638607\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_reportes` (`rep_titulo`, `rep_descripcion`, `tip_id`, `niv_id`, `rep_latitud`, `rep_longitud`, `rep_imagen`, `rep_estado`, `rep_fecha`, `usu_id`) VALUES (\'Desague atorado\', \'gh\', \'aire\', \'bajo\', \'-5.205166\', \'-80.638607\', \'1763440559_12ccff895a87a96405e7.jpg\', \'pendiente\', \'2025-11-18\', \'-80.638607\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_reportes` (`rep_titulo`, `rep_descripcion`, `tip_id`, `niv_id`, `rep_latitud`, `rep_longitud`, `rep_imagen`, `rep_estado`, `rep_fecha`, `usu_id`) VALUES (:rep_titulo:, :rep_descripcion:, :tip_id:, :niv_id:, :rep_latitud:, :rep_longitud:, :rep_imagen:, :rep_estado:, :rep_fecha:, :usu_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Reporte.php(57): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reporte->guardar()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 06:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 06:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 06:26:49 --> Error: Class "App\Controllers\TipoContaminacionModel" not found
+[Method: GET, Route: admin/mapa]
+in APPPATH\Controllers\Reporte.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reporte->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 06:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 06:26:53 --> Error: Class "App\Controllers\TipoContaminacionModel" not found
+[Method: GET, Route: admin/mapa]
+in APPPATH\Controllers\Reporte.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reporte->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 06:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 06:27:47 --> ErrorException: Attempt to read property "tip_id" on array
+[Method: GET, Route: admin/mapa]
+in APPPATH\Views\admin\vw_reporte_modal_mantenimiento.php on line 49.
+ 1 APPPATH\Views\admin\vw_reporte_modal_mantenimiento.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tip_id" on array', 'C:\\xampp\\htdocs\\ecovision\\app\\Views\\admin\\vw_reporte_modal_mantenimiento.php', 49)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ecovision\\app\\Views\\admin\\vw_reporte_modal_mantenimiento.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_reporte_modal_mantenimiento', [], true)
+ 5 APPPATH\Views\admin\vw_mapacalor.php(25): view('admin/vw_reporte_modal_mantenimiento')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ecovision\\app\\Views\\admin\\vw_mapacalor.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_mapacalor', [], true)
+ 9 APPPATH\Controllers\Reporte.php(37): view('admin/vw_mapacalor', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reporte->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 06:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 06:28:10 --> ErrorException: Attempt to read property "tip_id" on array
+[Method: GET, Route: admin/mapa]
+in APPPATH\Views\admin\vw_reporte_modal_mantenimiento.php on line 49.
+ 1 APPPATH\Views\admin\vw_reporte_modal_mantenimiento.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tip_id" on array', 'C:\\xampp\\htdocs\\ecovision\\app\\Views\\admin\\vw_reporte_modal_mantenimiento.php', 49)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ecovision\\app\\Views\\admin\\vw_reporte_modal_mantenimiento.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_reporte_modal_mantenimiento', [], true)
+ 5 APPPATH\Views\admin\vw_mapacalor.php(25): view('admin/vw_reporte_modal_mantenimiento')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ecovision\\app\\Views\\admin\\vw_mapacalor.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_mapacalor', [], true)
+ 9 APPPATH\Controllers\Reporte.php(37): view('admin/vw_mapacalor', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reporte->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 06:28:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 06:28:28 --> ErrorException: Attempt to read property "niv_id" on array
+[Method: GET, Route: admin/mapa]
+in APPPATH\Views\admin\vw_reporte_modal_mantenimiento.php on line 87.
+ 1 APPPATH\Views\admin\vw_reporte_modal_mantenimiento.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "niv_id" on array', 'C:\\xampp\\htdocs\\ecovision\\app\\Views\\admin\\vw_reporte_modal_mantenimiento.php', 87)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ecovision\\app\\Views\\admin\\vw_reporte_modal_mantenimiento.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_reporte_modal_mantenimiento', [], true)
+ 5 APPPATH\Views\admin\vw_mapacalor.php(25): view('admin/vw_reporte_modal_mantenimiento')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ecovision\\app\\Views\\admin\\vw_mapacalor.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_mapacalor', [], true)
+ 9 APPPATH\Controllers\Reporte.php(37): view('admin/vw_mapacalor', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reporte->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 06:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 06:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 06:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 23:24:52 --> ParseError: syntax error, unexpected variable "$routes"
+[Method: GET, Route: auth/usuarios]
+in APPPATH\Config\Routes.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 23:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 23:25:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/vw_usuarios.php"
+[Method: GET, Route: auth/usuarios]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/vw_usuarios.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_usuarios', [], true)
+ 3 APPPATH\Controllers\Usuario.php(49): view('admin/vw_usuarios')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->vw_cuentas()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 23:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 23:28:24 --> Error: Call to undefined function getPermitido()
+[Method: GET, Route: auth/usuarios]
+in APPPATH\Views\usuarios\vw_panel_usuarios.php on line 1.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('usuarios/vw_panel_usuarios', [], true)
+ 4 APPPATH\Controllers\Usuario.php(49): view('usuarios/vw_panel_usuarios')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->vw_cuentas()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 23:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 23:35:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/vw_head.php"
+[Method: GET, Route: auth/usuarios]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/vw_head.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_head', [], true)
+ 3 APPPATH\Controllers\Usuario.php(46): view('admin/vw_head', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->vw_cuentas()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 23:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 23:37:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/vw_head.php"
+[Method: GET, Route: mapa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/vw_head.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_head', [], true)
+ 3 APPPATH\Controllers\Reporte.php(34): view('admin/vw_head', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reporte->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 23:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 23:37:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/vw_reporte_modal_mantenimiento.php"
+[Method: GET, Route: mapa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/vw_reporte_modal_mantenimiento.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/vw_reporte_modal_mantenimiento', [], true)
+ 3 APPPATH\Views\reporte\vw_mapacalor.php(25): view('admin/vw_reporte_modal_mantenimiento')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\ecovision\\app\\Views\\reporte\\vw_mapacalor.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('reporte/vw_mapacalor', [], true)
+ 7 APPPATH\Controllers\Reporte.php(37): view('reporte/vw_mapacalor', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reporte->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 23:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-18 23:49:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "reporte/vw_mapacalor.php"
+[Method: GET, Route: mapa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('reporte/vw_mapacalor.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('reporte/vw_mapacalor', [], true)
+ 3 APPPATH\Controllers\Reporte.php(37): view('reporte/vw_mapacalor', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reporte->vw_mapa()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-18 23:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-18 23:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
