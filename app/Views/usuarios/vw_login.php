@@ -71,7 +71,7 @@ $("#btningresar").click(function(event) {
     },
     success: function(e) {
         if (e.msg == "Accediste") {
-            window.location=base_url + "admin";
+            window.location=base_url;
         }
         else{
           alert("Usuario y/o clave incorrecta");

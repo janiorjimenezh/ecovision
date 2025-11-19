@@ -8,7 +8,7 @@ class Usuario extends BaseController
     
     //Muestra la pagina con el formulario para inicar sesión
     public function vw_login(){
-        echo view('admin/vw_login');
+        echo view('usuarios/vw_login');
     }
 
     //Recibe el usuario y contraseña para validar el inicio de sesión
